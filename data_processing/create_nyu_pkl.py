@@ -29,8 +29,8 @@ import mat73
 import numpy as np
 
 # load original dicts
-nyuv2_dict = mat73.loadmat("../data/nyuv2/nyu_depth_v2_labeled.mat")
-with gzip.GzipFile("../data/nyuv2/all_normals.pklz", "r") as file:
+nyuv2_dict = mat73.loadmat("/lustre/scratch/diff/datasets/nyuv2/nyu_depth_v2_labeled.mat")
+with gzip.GzipFile("/lustre/scratch/diff/datasets/nyuv2/all_normals.pklz", "r") as file:
     snorm_dict = pickle.load(file)
 
 # get images and snorm
@@ -40,8 +40,8 @@ all_snorms = np.transpose(snorm_dict["all_normals"], (0, 3, 1, 2))
 scene_types = nyuv2_dict["sceneTypes"]
 
 # get split data
-train_json = json.load(open("../data/nyuv2/train_SN40.json"))
-test_json = json.load(open("../data/nyuv2/test_SN40.json"))
+train_json = json.load(open("/lustre/scratch/diff/datasets/nyuv2/train_SN40.json"))
+test_json = json.load(open("/lustre/scratch/diff/datasets/nyuv2/test_SN40.json"))
 train_split = [int(_ins["img"].split("_")[0]) - 1 for _ins in train_json]
 test_split = [int(_ins["img"].split("_")[0]) - 1 for _ins in test_json]
 
@@ -55,7 +55,7 @@ save_dict = {
     "test_indices": np.array(test_split),
 }
 
-save_path = "../data/nyuv2/nyuv2_snorm_all.pkl"
+save_path = "/lustre/scratch/diff/datasets/nyuv2/nyuv2_snorm_all.pkl"
 print(f"Saving combined pkl file at {save_path}")
 with open(save_path, "wb") as f:
     pickle.dump(save_dict, f)

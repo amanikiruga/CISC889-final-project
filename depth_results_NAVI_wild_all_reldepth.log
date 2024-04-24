@@ -1,0 +1,2 @@
+23042024-1101, stable-diffusion-2-1_noise-1            , 16, 1    , dense     , identity_readout_k3      ,  10, 1.50,      0.001,        0.0,   16, NAVI_multiview_all_reldepth, NAVI_wild_all_reldepth, 0.3219, 0.5660, 0.7216, 0.1876, 0.3907, 0.6423, 0.7834, 0.1631 
+23042024-1059, stable-diffusion-2-1_noise-1            , 16, 0-1-2-3, dense     , bindepth_dpt_k3          ,  10, 1.50,     0.0005,        0.0,   16, NAVI_multiview_all_reldepth, NAVI_wild_all_reldepth, 0.3711, 0.6489, 0.8106, 0.1433, 0.5173, 0.7726, 0.8804, 0.1141 

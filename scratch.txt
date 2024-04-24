@@ -1,0 +1,48 @@
+# train depth image 
+python train_depth.py backbone=dynamicrafter batch_size=16 backbone.batch_size=16 +backbone.return_multilayer=True
+python train_depth.py backbone=dift batch_size=16 note="dift_image_probe_04_21" dataset.image_mean="imagenet" +backbone.return_multilayer=True
+
+python train_snorm.py backbone=dynamicrafter batch_size=8 backbone.batch_size=8 +backbone.return_multilayer=True
+
+python evaluate_navi_correspondence.py backbone=dynamicrafter backbone.batch_size=4
+
+python evaluate_scannet_correspondence.py backbone=dynamicrafter backbone.batch_size=2
+
+python evaluate_spair_correspondence.py backbone=dynamicrafter backbone.batch_size=2
+
+# train depth video 
+python train_depth_video.py batch_size=1 note="dynamicrafter_video_probe_04_21" +backbone.return_multilayer=True
+python train_depth_video.py batch_size=8 note="dift_video_probe_04_21" backbone=dift +backbone.return_multilayer=True
+
+nohup python train_depth_video.py batch_size=1 note="dynamicrafter_video_probe_step_01_04_21" backbone.time_step=1 +backbone.return_multilayer=True > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.err &
+
+26121MiB
+
+# salloc 
+salloc --partition=standard --gres=gpu:a100 --mem=220G --time=0-08:30:00 --cpus-per-task=8
+salloc -g ececis_research --partition=standard --cpus-per-task=8 --mem=220G --gres=gpu:a100 --time=8:00:00
+
+# train depth video with readout head and regression 
+python train_depth_video.py batch_size=16 note="dynamicrafter_video_probe_readout_regression_04_23" optimizer.probe_lr=0.001
+
+nohup python train_depth_video.py batch_size=1 note="dynamicrafter_video_probe_step_01_04_21" backbone.time_step=1 +backbone.return_multilayer=True > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.err &
+
+
+
+
+# train navi depth bin probe
+
+python train_depth.py backbone=dift batch_size=16 note="dift_navi_reldepth" dataset=navi_reldepth +backbone.return_multilayer=True optimizer.n_epochs=200 +log_interval=50 +scale_invariant=True +probe.scale_invariant=True
+nohup python train_depth.py backbone=dift batch_size=16 note="dift_navi_reldepth" dataset=navi_reldepth +backbone.return_multilayer=True optimizer.n_epochs=200 +log_interval=50 +scale_invariant=True +probe.scale_invariant=True > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.err &
+nohup python train_depth.py backbone=dift batch_size=16 note="dift_navi_reldepth" dataset=navi_reldepth +backbone.return_multilayer=True optimizer.n_epochs=200 +log_interval=50 > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.err &
+
+
+# train navi my regression probe 
+python train_depth_video.py batch_size=16 note="dift_navi_reldepth_readout_regression_04_23" dataset=navi_reldepth optimizer.probe_lr=0.001 dataset.image_mean="imagenet" backbone=dift optimizer.n_epochs=200 +log_interval=50 +scale_invariant=True +probe.scale_invariant=True
+nohup python train_depth_video.py batch_size=16 note="dift_navi_reldepth_readout_regression_04_23" dataset=navi_reldepth optimizer.probe_lr=0.001 dataset.image_mean="imagenet" backbone=dift optimizer.n_epochs=200 +log_interval=50 +probe.scale_invariant=True > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job1.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job1.err &
+nohup python train_depth_video.py batch_size=16 note="dift_navi_reldepth_readout_regression_04_23" dataset=navi_reldepth optimizer.probe_lr=0.001 dataset.image_mean="imagenet" backbone=dift optimizer.n_epochs=200 +log_interval=50 +probe.scale_invariant=False > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job2.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job2.err &
+
+
+81980 r06g06
+197455 r06g00
+198088 r06g00

@@ -1,0 +1,14 @@
+system:
+  random_seed: 8
+  num_gpus: 1
+  port: 12355
+note: ""
+batch_size: 16
+scale_invariant: False
+defaults:
+  - optimizer: ten_epoch
+  - loss: depth_regression
+  - backbone: dynamicrafter_video
+  - dataset: nyu_video
+  - probe: depth_readout
+  - _self_

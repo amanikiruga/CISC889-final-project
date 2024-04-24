@@ -120,7 +120,7 @@ def evaluate_dataset(model, dataset, thresh, verbose=False):
 
 @hydra.main("./configs", "spair_correspondence", None)
 def main(cfg: DictConfig):
-    data_root = "/nfs/turbo/justincj-turbo/mbanani/projects/geoeval/data/SPair-71k"
+    data_root = "/lustre/scratch/diff/datasets/SPair-71k"
     thresh = 0.10
 
     # ===== Get model =====

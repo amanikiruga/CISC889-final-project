@@ -1,0 +1,5 @@
+_target_: evals.datasets.nyu_video.NYU_video
+train_path: /lustre/scratch/diff/datasets/nyu_geonet/data
+image_mean: None
+augment_train: False
+center_crop: True

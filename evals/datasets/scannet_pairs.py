@@ -37,7 +37,7 @@ class ScanNetPairsDataset(torch.utils.data.Dataset):
 
         # Some defaults for consistency.
         self.name = "ScanNet-pairs"
-        self.root = "data/scannet_test_1500"
+        self.root = "/lustre/scratch/diff/datasets/scannet_test_1500"
         self.split = "test"
         self.num_views = 2
 

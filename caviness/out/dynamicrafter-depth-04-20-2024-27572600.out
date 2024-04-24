@@ -1,0 +1,2213 @@
+Adding dependency `anaconda/5.2.0:python3` to your environment
+Adding package `svd3d/20231214` to your environment
+Adding package `git/2.29.3` to your environment
+NYU-GeoNet trainval: 30914 instances.
+NYUv2 labeled test set: 654 instances
+config file used /work/ececis_research/peace/DynamiCrafter/configs/inference_512_v1.0.yaml
+[2024-04-20 14:01:19,353][mainlogger][INFO] - LatentVisualDiffusion: Running in v-prediction mode
+DiffusionWrapper instantiating from {'target': 'lvdm.modules.networks.openaimodel3d.UNetModel', 'params': {'in_channels': 8, 'out_channels': 4, 'model_channels': 320, 'attention_resolutions': [4, 2, 1], 'num_res_blocks': 2, 'channel_mult': [1, 2, 4, 4], 'dropout': 0.1, 'num_head_channels': 64, 'transformer_depth': 1, 'context_dim': 1024, 'use_linear': True, 'use_checkpoint': False, 'temporal_conv': True, 'temporal_attention': True, 'temporal_selfatt_only': True, 'use_relative_position': False, 'use_causal_attention': False, 'temporal_length': 16, 'addition_attention': True, 'image_cross_attention': True, 'default_fs': 24, 'fs_condition': True}}
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+[2024-04-20 14:01:30,242][root][INFO] - Loaded ViT-H-14 model config.
+[2024-04-20 14:01:37,215][root][INFO] - Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+Instantiating LatentVisualDiffusion
+embedding model config: {'target': 'lvdm.modules.encoders.condition.FrozenOpenCLIPImageEmbedderV2', 'params': {'freeze': True}}
+[2024-04-20 14:01:38,662][root][INFO] - Loaded ViT-H-14 model config.
+[2024-04-20 14:01:45,323][root][INFO] - Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+using custom UNetModel
+>>> model checkpoint loaded.
+[2024-04-20 14:03:22,956][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:04:46,927][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:06:01,777][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:07:16,635][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:08:31,222][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:09:45,709][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:11:00,243][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:12:14,937][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:13:29,643][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:14:44,206][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:15:58,649][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:17:13,388][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:18:28,108][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:19:42,761][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:20:57,411][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:22:11,848][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:23:26,437][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:24:41,092][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:25:55,561][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:27:10,238][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:28:24,912][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:29:39,663][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:30:54,189][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:32:08,662][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:33:23,328][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:34:38,237][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:35:53,058][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:37:07,871][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:38:22,592][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:39:37,520][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:40:52,352][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:42:07,196][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:43:21,981][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:44:36,772][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:45:51,490][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:47:06,252][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:48:20,990][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:49:35,533][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:50:50,131][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:52:05,056][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:53:19,819][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:54:34,700][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:55:49,285][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:57:03,853][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:58:18,462][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 14:59:33,138][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:00:47,886][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:02:02,650][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:03:17,514][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:04:32,096][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:05:46,809][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:07:01,452][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:08:16,158][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:09:31,027][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:10:45,546][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:12:00,213][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:13:14,802][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:14:29,544][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:15:44,181][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:16:58,936][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:18:13,587][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:19:28,226][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:20:42,826][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:21:57,458][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:23:12,103][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:24:26,972][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:25:41,549][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:26:56,263][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:28:10,769][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:29:25,297][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:30:39,960][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:31:54,522][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:33:09,220][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:34:24,005][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:35:38,651][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:36:53,113][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:38:07,628][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:39:22,221][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:40:36,756][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:41:51,387][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:43:06,050][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:44:20,566][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:45:35,090][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:46:49,740][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:48:04,471][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:49:18,968][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:50:33,749][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:51:48,622][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:53:03,243][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:54:18,080][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:55:32,880][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:56:47,669][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:58:02,346][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 15:59:16,987][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:00:31,555][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:01:46,058][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:03:00,540][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:04:14,934][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:05:29,489][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:06:44,140][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:07:58,793][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:09:14,031][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:10:28,558][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:11:43,044][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:12:57,753][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:14:12,548][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:15:27,166][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:16:41,560][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:17:55,967][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:19:10,498][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:20:24,963][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:21:39,495][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:22:54,205][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:24:08,938][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:25:23,509][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:26:38,254][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:27:52,706][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:29:07,136][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:30:21,547][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:31:36,152][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:32:50,774][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:34:05,546][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:35:20,314][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:36:35,063][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:37:49,817][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:39:04,454][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:40:19,043][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:41:33,935][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:42:48,450][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:44:03,276][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:45:17,958][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:46:32,778][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:47:47,425][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:49:01,927][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:50:16,559][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:51:31,332][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:52:46,007][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:54:00,787][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:55:15,503][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:56:30,084][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:57:44,443][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 16:58:59,063][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:00:13,661][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:01:28,305][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:02:43,095][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:03:57,829][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:05:12,334][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:06:26,998][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:07:41,696][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:08:56,669][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:10:11,457][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:11:26,179][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:12:40,881][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:13:55,759][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:15:10,477][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:16:25,335][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:17:40,407][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:18:55,136][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:20:09,955][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:21:24,593][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:22:39,347][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:23:54,050][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:25:08,708][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:26:23,495][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:27:38,448][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:28:53,181][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:30:07,968][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:31:22,676][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:32:37,313][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:33:51,996][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:35:06,600][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:36:21,067][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:37:35,472][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:38:49,848][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:40:04,383][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:41:19,110][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:42:33,754][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:43:48,301][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:45:02,831][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:46:17,356][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:47:31,736][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:48:46,169][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:50:00,582][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:51:15,240][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:52:29,883][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:53:44,309][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:54:58,723][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:56:13,124][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:57:27,719][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:58:42,494][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 17:59:57,293][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:01:12,040][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:02:26,440][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:03:41,116][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:04:55,622][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:06:10,110][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:07:24,576][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:08:39,227][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:09:53,896][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:11:08,580][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:12:23,178][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:13:37,727][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:14:52,467][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:16:07,077][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:17:21,756][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:18:36,236][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:19:50,591][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:21:05,120][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:22:19,564][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:23:34,183][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:24:49,062][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:26:06,674][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:27:21,298][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:28:36,367][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:29:51,328][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:31:05,810][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:32:20,691][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:33:35,487][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:34:50,386][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:36:05,175][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:37:20,118][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:38:34,822][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:39:49,165][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:41:03,755][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:42:18,320][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:43:33,361][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:44:48,233][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:46:03,125][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:47:18,077][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:48:32,950][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:49:48,002][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:51:02,896][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:52:17,974][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:53:32,720][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:54:47,587][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:56:02,640][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:57:17,345][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:58:32,294][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 18:59:47,183][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:01:02,202][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:02:16,803][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:03:31,487][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:04:46,100][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:06:00,832][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:07:15,714][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:08:30,641][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:09:45,614][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:11:00,539][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:12:15,547][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:13:30,405][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:14:44,947][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:15:59,425][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:17:13,996][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:18:28,737][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:19:43,535][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:20:57,937][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:22:12,586][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:23:27,263][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:24:41,946][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:25:56,622][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:27:11,368][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:28:26,106][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:29:41,171][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:30:55,594][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:32:10,387][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:33:25,333][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:34:39,811][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:35:54,777][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:37:09,639][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:38:24,504][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:39:39,280][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:40:54,154][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:42:08,982][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:43:23,565][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:44:38,413][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:45:53,378][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:47:08,338][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:48:23,116][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:49:37,910][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:50:52,734][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:52:07,459][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:53:22,327][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:54:37,237][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:55:51,873][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:57:06,881][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:58:21,684][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 19:59:36,658][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:00:51,235][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:02:06,017][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:03:20,943][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:04:35,930][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:05:50,842][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:07:05,800][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:08:20,515][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:09:35,356][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:10:50,156][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:12:04,865][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:13:19,670][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:14:34,382][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:15:49,182][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:17:03,781][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:18:18,295][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:19:33,138][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:20:47,905][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:22:02,260][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:23:17,173][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:24:32,035][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:25:46,931][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:27:01,757][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:28:16,194][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:29:30,529][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:30:45,290][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:31:59,915][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:33:14,266][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:34:28,820][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:35:43,230][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:36:57,666][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:38:12,190][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:39:27,026][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:40:41,935][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:41:56,871][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:43:11,248][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:44:25,814][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:45:40,556][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:46:55,291][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:48:10,221][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:49:25,107][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:50:39,869][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:51:54,682][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:53:09,692][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:54:24,555][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:55:39,204][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:56:53,900][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:58:08,462][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 20:59:23,085][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:00:37,894][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:01:52,767][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:03:07,423][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:04:22,148][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:05:36,932][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:06:51,553][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:08:06,362][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:09:21,058][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:10:35,505][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:11:50,298][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:13:05,034][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:14:19,432][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:15:34,090][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:16:48,925][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:18:03,448][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:19:18,347][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:20:33,199][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:21:48,086][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:23:02,929][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:24:17,531][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:25:32,451][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:26:47,491][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:28:02,496][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:29:17,441][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:30:32,229][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:31:46,942][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:33:01,711][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:34:16,174][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:35:30,516][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:36:45,020][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:37:59,492][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:39:14,337][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:40:29,196][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:41:43,782][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:42:58,418][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:44:12,988][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:45:27,871][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:46:42,868][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:47:57,570][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:49:12,598][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:50:27,362][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:51:42,161][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:52:57,076][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:54:12,049][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:55:27,135][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:56:41,903][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:57:56,615][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 21:59:11,473][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:00:26,457][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:01:41,353][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:02:56,176][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:04:11,187][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:05:25,943][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:06:40,817][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:07:55,737][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:09:10,516][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:10:25,385][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:11:40,204][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:12:55,029][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:14:09,788][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:15:24,719][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:16:39,695][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:17:54,636][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:19:09,231][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:20:24,019][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:21:38,922][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:22:53,720][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:24:08,220][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:25:23,193][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:26:38,099][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:27:53,037][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:29:07,575][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:30:22,148][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:31:36,860][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:32:51,206][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:34:06,058][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:35:20,736][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:36:35,506][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:37:50,446][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:39:05,115][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:40:19,591][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:41:34,479][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:42:49,375][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:44:03,805][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:45:18,724][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:46:33,584][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:47:48,580][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:49:03,024][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:50:17,445][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:51:32,301][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:52:46,770][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:54:01,114][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:55:15,625][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:56:30,247][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:57:45,141][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 22:59:00,128][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:00:14,715][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:01:29,421][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:02:44,237][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:03:59,221][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:05:13,735][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:06:28,563][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:07:43,349][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:08:58,104][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:10:12,848][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:11:27,580][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:12:42,500][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:13:57,247][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:15:11,835][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:16:26,456][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:17:41,304][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:18:56,117][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:20:10,627][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:21:25,137][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:22:39,714][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:23:54,643][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:25:09,730][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:26:24,691][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:27:39,692][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:28:54,385][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:30:09,248][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:31:23,960][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:32:38,981][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:33:53,752][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:35:08,180][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:36:23,105][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:37:38,228][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:38:53,117][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:40:08,092][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:41:23,001][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:42:38,003][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:43:53,316][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:45:08,827][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:46:23,874][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:47:38,959][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:48:54,408][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:50:09,799][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:51:25,142][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:52:40,466][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:53:55,984][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:55:11,466][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:56:26,369][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:57:41,501][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-20 23:58:56,760][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:00:12,253][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:01:27,789][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:02:43,224][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:03:58,764][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:05:14,115][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:06:29,574][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:07:44,920][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:09:00,162][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:10:15,394][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:11:30,710][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:12:45,948][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:14:01,380][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:15:16,390][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:16:31,803][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:17:47,290][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:19:02,769][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:20:18,206][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:21:33,661][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:22:48,310][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:24:03,807][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:25:19,468][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:26:34,971][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:27:50,096][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:29:05,252][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:30:20,180][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:31:35,154][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:32:50,188][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:34:05,498][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:35:20,707][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:36:35,615][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:37:50,933][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:39:06,463][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:40:21,585][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:41:36,725][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:42:52,061][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:44:07,386][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:45:22,970][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:46:38,413][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:47:53,924][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:49:09,254][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:50:24,722][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:51:40,164][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:52:55,406][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:54:10,652][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:55:25,967][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:56:41,040][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:57:56,136][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 00:59:11,498][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:00:26,876][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:01:42,345][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:02:57,902][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:04:13,714][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:05:29,459][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:06:45,004][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:08:00,629][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:09:15,838][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:10:31,490][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:11:46,916][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:13:02,315][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:14:17,653][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:15:33,163][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:16:48,061][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:18:02,961][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:19:18,535][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:20:33,806][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:21:49,074][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:23:04,163][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:24:19,417][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:25:34,388][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:26:49,685][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:28:05,018][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:29:20,319][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:30:35,506][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:31:51,251][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:33:06,321][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:34:21,646][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:35:37,258][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:36:52,996][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:38:08,520][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:39:23,458][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:40:38,416][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:41:53,355][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:43:08,439][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:44:23,998][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:45:39,571][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:46:54,575][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:48:10,045][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:49:25,563][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:50:40,818][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:51:56,127][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:53:11,102][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:54:26,054][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:55:40,985][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:56:56,456][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:58:11,492][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 01:59:26,920][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:00:41,880][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:01:57,307][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:03:12,579][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:04:27,854][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:05:43,098][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:06:58,053][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:08:12,921][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:09:27,758][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:10:42,607][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:11:57,661][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:13:13,336][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:14:27,850][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:15:42,606][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:16:57,861][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:18:13,091][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:19:28,348][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:20:43,605][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:21:58,771][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:23:13,754][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:24:28,726][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:25:44,054][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:26:59,631][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:28:15,228][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:29:30,163][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:30:45,521][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:32:01,124][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:33:16,542][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:34:31,743][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:35:47,481][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:37:02,504][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:38:18,064][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:39:33,610][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:40:48,830][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:42:04,383][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:43:19,544][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:44:35,097][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:45:50,600][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:47:05,944][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:48:21,062][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:49:36,283][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:50:51,641][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:52:07,149][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:53:22,174][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:54:37,363][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:55:52,817][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:57:08,079][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:58:23,041][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 02:59:37,988][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:00:53,071][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:02:08,281][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:03:23,795][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:04:39,355][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:05:54,844][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:07:10,345][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:08:25,825][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:09:41,372][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:10:56,939][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:12:12,425][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:13:27,912][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:14:43,425][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:15:58,980][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:17:14,801][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:18:29,827][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:19:44,746][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:20:59,823][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:22:15,097][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:23:30,006][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:24:44,911][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:25:59,903][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:27:14,435][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:28:28,920][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:29:43,744][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:30:58,887][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:32:14,360][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:33:29,956][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:34:45,525][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:36:00,558][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:37:15,989][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:38:31,453][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:39:46,972][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:41:02,199][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:42:17,167][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:43:32,129][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:44:47,039][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:46:01,950][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:47:16,843][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:48:32,087][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:49:47,076][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:51:01,616][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:52:16,343][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:53:30,844][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:54:46,202][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:56:01,806][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:57:17,122][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:58:32,136][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 03:59:47,706][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:01:02,823][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:02:18,289][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:03:33,381][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:04:48,575][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:06:03,978][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:07:19,504][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:08:35,060][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:09:50,609][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:11:05,951][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:12:21,261][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:13:36,601][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:14:52,027][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:16:07,216][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:17:22,203][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:18:37,107][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:19:52,587][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:21:07,678][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:22:22,526][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:23:36,864][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:24:51,212][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:26:05,563][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:27:19,928][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:28:35,464][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:29:51,021][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:31:06,235][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:32:21,690][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:33:37,035][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:34:52,476][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:36:07,901][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:37:23,459][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:38:38,856][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:39:54,426][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:41:09,764][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:42:25,253][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:43:40,988][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:44:56,354][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:46:11,329][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:47:26,897][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:48:42,047][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:49:57,206][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:51:12,064][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:52:27,099][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:53:41,835][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:54:56,668][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:56:11,260][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:57:26,127][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:58:40,800][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 04:59:55,620][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:01:10,328][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:02:25,204][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:03:39,640][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:04:54,182][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:06:08,722][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:07:23,439][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:08:38,214][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:09:53,051][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:11:07,988][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:12:23,888][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:13:49,743][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:15:49,516][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])
+[2024-04-21 05:18:22,714][lightning_fabric.utilities.seed][INFO] - [rank: 0] Seed set to 123
+latent space images shape torch.Size([8, 4, 16, 40, 64])
+intermediate keys dict_keys(['x_inter', 'pred_x0'])

@@ -54,13 +54,14 @@ def resize_image(path, interp=2, new_size=1024):
     image = image.resize(new_size, interp)
     new_path = path.split("/")
     new_path[-1] = "downsampled_" + new_path[-1]
-
+ 
     new_path = "/".join(new_path)
     image.save(new_path)
 
 
 if __name__ == "__main__":
-    data_root = Path(__file__).parent / "../data/navi_v1"
+    # data_root = Path(__file__).parent / "../data/navi_v1"  
+    data_root = Path("/lustre/scratch/diff/datasets/navi_v1")
     data_root = data_root.resolve()
 
     # get all image paths

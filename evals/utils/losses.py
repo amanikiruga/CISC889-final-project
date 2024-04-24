@@ -84,7 +84,19 @@ class DepthLoss(nn.Module):
         loss_s = self.sig_w * sig_loss(pred, target)
         loss_g = self.grad_w * gradient_loss(pred, target)
         return loss_s + loss_g
+    
+class DepthRegressionLoss(nn.MSELoss):
+    def __init__(self, max_depth=10):
+        super().__init__()
+        self.max_depth = max_depth
 
+    def forward(self, pred, target):
+        # ignore pixels with depth > max_depth
+        mask = target <= self.max_depth
+        target = target[mask]
+        pred = pred[mask]
+
+        return super().forward(pred, target)
 
 def gradient_loss(depth_pr, depth_gt, eps=0.001):
     """GradientLoss.

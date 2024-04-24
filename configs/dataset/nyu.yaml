@@ -1,6 +1,6 @@
 _target_: evals.datasets.nyu.NYU
-train_path: data/nyuv2_geonet
-test_path: data/nyuv2/nyuv2_snorm_all.pkl
-image_mean: imagenet
+train_path: /lustre/scratch/diff/datasets/nyu_geonet/data
+test_path: /lustre/scratch/diff/datasets/nyuv2/nyuv2_snorm_all.pkl
+image_mean: None
 augment_train: True
 center_crop: True

@@ -156,8 +156,154 @@ class NYU_geonet(torch.utils.data.Dataset):
         insts.sort()
 
         # remove bad indices
-        del insts[21181]
-        del insts[6919]
+        try: 
+            del insts[21181]
+        except: 
+            print("unable to remove index 21181")   
+        try: 
+            del insts[6919]
+        except: 
+            print("unable to remove index 6919")
+            
+
+        assert split in ["train", "valid", "trainval"]
+        if split == "train":
+            self.instances = [x for i, x in enumerate(insts) if i % 20 != 0]
+        elif split == "valid":
+            self.instances = [x for i, x in enumerate(insts) if i % 20 == 0]
+        elif split == "trainval":
+            self.instances = insts
+        else:
+            raise ValueError()
+
+        print(f"NYU-GeoNet {split}: {len(self.instances)} instances.")
+
+    def __len__(self):
+        return len(self.instances)
+
+    def __getitem__(self, index):
+        file_name = self.instances[index]
+        room = "_".join(file_name.split("-")[0].split("_")[:-2])
+
+        # extract elements from the matlab thing
+        instance = scipy.io.loadmat(os.path.join(self.root_dir, file_name))
+        image = instance["img"][:480, :640]
+        depth = instance["depth"][:480, :640]
+        snorm = torch.tensor(instance["norm"][:480, :640]).permute(2, 0, 1)
+
+        # process image
+        image[:, :, 0] = image[:, :, 0] + 2 * 122.175
+        image[:, :, 1] = image[:, :, 1] + 2 * 116.169
+        image[:, :, 2] = image[:, :, 2] + 2 * 103.508
+        image = image.astype(np.uint8)
+        image = self.image_transform(image)
+
+        # set max depth to 10
+        depth[depth > self.max_depth] = 0
+
+        # center crop
+        if self.center_crop:
+            image = image[..., 80:-80]
+            depth = depth[..., 80:-80]
+            snorm = snorm[..., 80:-80]
+
+        if self.shared_transform:
+            # put in correct format (h, w, feat)
+            image = image.permute(1, 2, 0).numpy()
+            snorm = snorm.permute(1, 2, 0).numpy()
+            depth = depth[:, :, None]
+
+            # transform
+            transformed = self.shared_transform(image=image, depth=depth, snorm=snorm)
+
+            # get back in (feat_dim x height x width)
+            image = torch.tensor(transformed["image"]).float().permute(2, 0, 1)
+            snorm = torch.tensor(transformed["snorm"]).float().permute(2, 0, 1)
+            depth = torch.tensor(transformed["depth"]).float()[None, :, :, 0]
+        else:
+            # move to torch tensors
+            depth = torch.tensor(depth).float()[None, :, :]
+            snorm = torch.tensor(snorm).float()
+
+        return {"image": image, "depth": depth, "snorm": snorm, "room": room}
+
+    def split_trainval(self, split, indices, scene_types):
+        """
+        Parses the directory for instances.
+        Input: data_dict -- sturcture  <object_id>/<collection>/<instances>
+
+        Output: all dataset instances
+        """
+        # get instances
+        assert split in ["train", "valid"]
+
+        # get all image collections by room type
+        split_dict = {}
+        for ind in indices:
+            scene = scene_types[ind][0]
+            if scene not in split_dict:
+                split_dict[scene] = [ind]
+            else:
+                split_dict[scene].append(ind)
+
+        # split images based on room type
+        train_ins, valid_ins = [], []
+        for scene in split_dict:
+            scene_inds = split_dict[scene]
+            if len(scene_inds) < 5:
+                train_ins += scene_inds
+            else:
+                scene_inds.sort()
+                ratio = int(0.80 * len(scene_inds))
+                train_ins += scene_inds[:ratio]
+                valid_ins += scene_inds[ratio:]
+
+        # collect instances based on correct coll
+        insts = train_ins if split == "train" else valid_ins
+        return insts
+
+
+class NYU_geonet_video(torch.utils.data.Dataset):
+    def __init__(
+        self,
+        path,
+        split,
+        image_mean="imagenet",
+        center_crop=False,
+        augment_train=False,
+        rotateflip=False,
+    ):
+        super().__init__()
+        self.name = "NYUv2"
+        self.center_crop = center_crop
+        self.max_depth = 10.0
+
+        # get transforms
+        image_size = (480, 480) if center_crop else (480, 640)
+        augment = augment_train and "train" in split
+        self.image_transform, self.shared_transform = get_nyu_transforms(
+            image_mean,
+            image_size,
+            augment,
+            rotateflip=rotateflip,
+            additional_targets={"depth": "image", "snorm": "image"},
+        )
+
+        # parse dataset
+        self.root_dir = path
+        insts = os.listdir(path)
+        insts.sort()
+
+        # remove bad indices
+        try: 
+            del insts[21181]
+        except: 
+            print("unable to remove index 21181")   
+        try: 
+            del insts[6919]
+        except: 
+            print("unable to remove index 6919")
+            
 
         assert split in ["train", "valid", "trainval"]
         if split == "train":

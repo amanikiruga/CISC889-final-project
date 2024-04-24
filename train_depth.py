@@ -40,6 +40,8 @@ from torch.nn.functional import interpolate
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.optim.lr_scheduler import LambdaLR
 from tqdm import tqdm
+import wandb
+import omegaconf
 
 from evals.datasets.builder import build_loader
 from evals.utils.losses import DepthLoss
@@ -72,6 +74,7 @@ def train(
     world_size=1,
     valid_loader=None,
     scale_invariant=False,
+    log_interval = 200
 ):
     for ep in range(n_epochs):
         if world_size > 1:
@@ -94,6 +97,7 @@ def train(
             else:
                 feats = model(images)
             pred = probe(feats)
+            print("pred shape", pred.shape)
             pred = interpolate(pred, size=target.shape[-2:], mode="bilinear")
 
             if scale_invariant:
@@ -114,6 +118,11 @@ def train(
                 pbar.set_description(
                     f"{ep} | loss: {loss:.4f} ({_loss:.4f}) probe_lr: {pr_lr:.2e}"
                 )
+                if i % log_interval == 0:
+                    wandb.log({"loss": _loss, "probe_lr": pr_lr})
+                    # log prediction and target 
+                    wandb.log({"prediction": wandb.Image(pred[:8].cpu().detach())})
+                    wandb.log({"target": wandb.Image(target[:8].cpu().detach())})
 
         train_loss /= len(train_loader)
 
@@ -129,19 +138,23 @@ def train(
 
 
 def validate(
-    model, probe, loader, loss_fn, verbose=True, scale_invariant=False, aggregate=True
+    model, probe, loader, loss_fn, verbose=True, scale_invariant=False, aggregate=True, log_interval = 20
 ):
     total_loss = 0.0
     metrics = None
     with torch.inference_mode():
         pbar = tqdm(loader, desc="Evaluation") if verbose else loader
-        for batch in pbar:
+        for i, batch in enumerate(pbar):
             images = batch["image"].cuda()
             target = batch["depth"].cuda()
 
             feat = model(images)
             pred = probe(feat).detach()
             pred = interpolate(pred, size=target.shape[-2:], mode="bilinear")
+
+            if i % log_interval == 0:
+                wandb.log({"val_prediction": wandb.Image(pred[:8].cpu().detach())})
+                wandb.log({"val_target": wandb.Image(target[:8].cpu().detach())})
 
             loss = loss_fn(pred, target)
             total_loss += loss.item()
@@ -159,9 +172,12 @@ def validate(
             else:
                 for key, value in batch_metrics.items():
                     metrics[key].append(value)
-
+    
     # aggregate
     total_loss = total_loss / len(loader)
+    
+    wandb.log({"val_mean_loss": total_loss})
+    wandb.log ({f"val_{key}": torch.cat(metrics[key], dim=0).mean() for key in metrics})
     for key in metrics:
         metric_key = torch.cat(metrics[key], dim=0)
         metrics[key] = metric_key.mean() if aggregate else metric_key
@@ -266,6 +282,8 @@ def train_model(rank, world_size, cfg):
         loss_fn=loss_fn,
         rank=rank,
         world_size=world_size,
+        log_interval=cfg.log_interval or 200,
+        scale_invariant = cfg.scale_invariant,
         # valid_loader=test_loader,
     )
 
@@ -297,8 +315,8 @@ def train_model(rank, world_size, cfg):
         ckpt_path = exp_path / "ckpt.pth"
         checkpoint = {
             "cfg": cfg,
-            "model": model.module.state_dict(),
-            "probe": probe.module.state_dict(),
+            "model": model.state_dict(),
+            "probe": probe.state_dict(),
         }
         torch.save(checkpoint, ckpt_path)
         logger.info(f"Saved checkpoint at {ckpt_path}")
@@ -309,6 +327,10 @@ def train_model(rank, world_size, cfg):
 
 @hydra.main(config_name="depth_training", config_path="./configs", version_base=None)
 def main(cfg: DictConfig):
+    wandb.config = omegaconf.OmegaConf.to_container(
+        cfg, resolve=True, throw_on_missing=True
+    )
+    wandb.init(project="depth_video_probe", name=cfg.note)
     world_size = cfg.system.num_gpus
     if world_size > 1:
         mp.spawn(train_model, args=(world_size, cfg), nprocs=world_size)

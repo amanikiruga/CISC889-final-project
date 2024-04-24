@@ -1,0 +1,2 @@
+_target_: evals.utils.losses.DepthRegressionLoss
+max_depth: 10

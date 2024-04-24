@@ -1,0 +1,7 @@
+_target_: evals.models.dynamicrafter.ExposedDynamiCrafter
+resolution: "320_512"
+time_step: 14
+layer: 1
+batch_size: 1
+output: dense
+is_single_image: False

@@ -1,0 +1,6 @@
+_target_: evals.models.probes.DepthHead
+head_type: readout
+prediction_type: identity
+hidden_dim: 128
+hidden_dim_2: 32
+kernel_size: 3

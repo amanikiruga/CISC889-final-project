@@ -1,0 +1,12 @@
+Adding dependency `anaconda/5.2.0:python3` to your environment
+Adding package `svd3d/20231214` to your environment
+Adding package `git/2.29.3` to your environment
+image_mean None
+number of scenes: 348
+NYU-GeoNet train: 20227 sets of frames.
+image_mean None
+number of scenes: 348
+NYU-GeoNet valid: 5510 sets of frames.
+> /work/ececis_research/peace/dino-diffusion/probe3d/evals/models/dift_sd.py(162)__init__()
+-> unet = MyUNet2DConditionModel.from_pretrained(sd_id, subfolder="unet")
+(Pdb) 
