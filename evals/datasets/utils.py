@@ -133,8 +133,11 @@ def get_nyu_transforms(
     elif image_mean == "None":
         mean = [0.0, 0.0, 0.0]
         std = [1.0, 1.0, 1.0]
-    else:
-        raise ValueError()
+    elif image_mean == "dynamicrafter": 
+        mean = [0.5, 0.5, 0.5]
+        std = [0.5, 0.5, 0.5]
+    else: 
+        raise ValueError("Invalid image_mean value got {} but expected clip, imagenet, None or dynamicrafter".format(image_mean))
 
     # get image transform
     image_transform = tv_transforms.Compose(

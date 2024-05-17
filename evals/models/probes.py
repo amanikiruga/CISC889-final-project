@@ -266,13 +266,12 @@ class ReadoutHead(nn.Module):
         x = self.silu(self.conv2(x))
 
         if not self.scale_invariant: 
-            print("not scale invariant")
+            # print("not scale invariant")
             x = self.conv3(x)
         else: 
-            print('scale invariant')
-            # x = self.tanh(self.conv3(x))
-            # x = self.tanh(self.conv3(x))
-            x = self.sigmoid(self.conv3(x))
+            # print('scale invariant')
+            x = self.tanh(self.conv3(x))
+            # x = self.sigmoid(self.conv3(x))
 
         return x
 

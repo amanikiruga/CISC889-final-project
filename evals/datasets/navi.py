@@ -131,11 +131,38 @@ class NAVI(torch.utils.data.Dataset):
             output["Rt_01"] = Rt_01
             output["pair_id"] = f"{img_id_0}-{img_id_1}"
         else:
-            obj_id, scene_id, img_id = self.instances[index]
-            output = self.get_single(obj_id, scene_id, img_id)
+            scene_ann = self.instances[index]
+            output = self.get_video(scene_ann, frames = 16)
 
         return output
+    def get_video(self, scene_ann, frames = 16):
+        obj_id, scene_id = scene_ann
+        img_ids = self.data_dict[obj_id][scene_id]["views"]
+        # choose random starting point
+        try: 
+            start = np.random.randint(0, len(img_ids) - frames + 1)
+        except Exception as e:
+            print("len img_ids", len(img_ids), frames, len(img_ids) - frames)
+            raise e
 
+
+        img_ids = img_ids[start:start + frames]
+
+        # get all frames
+        frames = []
+        for img_id in img_ids:
+            inst = self.get_single(obj_id, scene_id, img_id)
+            frames.append(inst)
+        # stack frames
+        output = {}
+        output["class_id"] = [_inst["class_id"] for _inst in frames]
+        output["anno"]  =  [_inst["anno"] for _inst in frames]
+        for key in frames[0]:
+            if key == 'class_id' or key == 'anno':
+                continue
+            output[key] = torch.stack([_inst[key] for _inst in frames], dim=0)
+
+        return output
     def get_single(self, obj_id, scene_id, img_id):
         obj_number = self.objects[obj_id]
         anno = self.data_dict[obj_id][scene_id]["annotations"][img_id]
@@ -328,9 +355,8 @@ class NAVI(torch.utils.data.Dataset):
                     continue
 
                 for scene in scenes:
-                    image_ids = self.data_dict[obj_id][scene]["views"]
-                    for _id in image_ids:
-                        self.instances.append((obj_id, scene, _id))
+                    if len(self.data_dict[obj_id][scene]["views"]) >= 16:
+                        self.instances.append((obj_id, scene))
 
         # create object -> class mapping
         self.objects.sort()

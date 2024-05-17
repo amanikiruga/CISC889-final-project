@@ -28,6 +28,25 @@ python train_depth_video.py batch_size=16 note="dynamicrafter_video_probe_readou
 nohup python train_depth_video.py batch_size=1 note="dynamicrafter_video_probe_step_01_04_21" backbone.time_step=1 +backbone.return_multilayer=True > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job.err &
 
 
+# train video hyperfeatures from dynamicrafter using readout probe
+python train_depth_video.py batch_size=1 note="dynamicrafter_hyperfeatures_video_probe_readout_regression_05_01" optimizer.probe_lr=0.001 optimizer.model_lr=0.001 backbone=dynamicrafter_hyperfeatures_video dataset.image_mean="dynamicrafter" +log_interval=1
+
+
+nohup python train_depth_video.py batch_size=1 note="dynamicrafter_hyperfeatures_video_probe_readout_regression_scale_invariant_05_01" optimizer.probe_lr=0.001 optimizer.model_lr=0.001 backbone=dynamicrafter_hyperfeatures_video dataset.image_mean="dynamicrafter" +log_interval=20 scale_invariant=True > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/hyperfeatures-experiments/out/video_scale_invariant.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/hyperfeatures-experiments/out/video_scale_invariant.err &
+
+# train image hyperfeatures from dynamicrafter using readout probe
+python train_depth_video.py batch_size=1 note="stableidffusion_hyperfeatures_image_probe_readout_regression_05_01" optimizer.probe_lr=0.001 optimizer.model_lr=0.001 backbone=stablediffusion_hyperfeatures dataset.image_mean="imagenet" +log_interval=20 batch_size=16 
+nohup python train_depth_video.py batch_size=1 note="stableidffusion_hyperfeatures_image_probe_readout_regression_05_01" optimizer.probe_lr=0.001 optimizer.model_lr=0.001 backbone=stablediffusion_hyperfeatures dataset.image_mean="imagenet" +log_interval=50 batch_size=16 > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/hyperfeatures-experiments/out/image_hyperfeatures.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/hyperfeatures-experiments/out/image_hyperfeatures.err &
+
+
+
+# image hyperfeatures on navi_reldepth
+python train_depth_video.py backbone=stablediffusion_hyperfeatures note="stablediffusion_hyperfeatures_navi_reldepth" dataset=navi_reldepth optimizer.probe_lr=0.001 optimizer.model_lr=0.001 optimizer.n_epochs=200 +log_interval=50 batch_size=16 +probe.scale_invariant=True
+python train_depth_video.py backbone=stablediffusion_hyperfeatures note="stablediffusion_hyperfeatures_navi_reldepth" dataset=navi_reldepth optimizer.probe_lr=0.001 optimizer.model_lr=0.001 optimizer.n_epochs=200 +log_interval=50 batch_size=1 +probe.scale_invariant=True
+nohup python train_depth_video.py backbone=stablediffusion_hyperfeatures note="stablediffusion_hyperfeatures_navi_reldepth" dataset=navi_reldepth optimizer.probe_lr=0.001 optimizer.model_lr=0.001 optimizer.n_epochs=200 +log_interval=50 batch_size=1 +probe.scale_invariant=True > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/hyperfeatures-experiments/out/image_hyperfeatures_navi_reldepth.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/hyperfeatures-experiments/out/image_hyperfeatures_navi_reldepth.err &
+
+# video hyperfeatures on navi_reldepth
+python train_depth_video.py backbone=dynamicrafter_hyperfeatures_video note="dynamicrafter_hyperfeatures_video_navi_reldepth" dataset=navi_reldepth optimizer.probe_lr=0.001 optimizer.model_lr=0.001 optimizer.n_epochs=200 +log_interval=20 batch_size=1 +probe.scale_invariant=True
 
 
 # train navi depth bin probe
@@ -43,6 +62,37 @@ nohup python train_depth_video.py batch_size=16 note="dift_navi_reldepth_readout
 nohup python train_depth_video.py batch_size=16 note="dift_navi_reldepth_readout_regression_04_23" dataset=navi_reldepth optimizer.probe_lr=0.001 dataset.image_mean="imagenet" backbone=dift optimizer.n_epochs=200 +log_interval=50 +probe.scale_invariant=False > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job2.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/job2.err &
 
 
-81980 r06g06
-197455 r06g00
-198088 r06g00
+
+# evaluate dift original nyu video 
+python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/21042024-1543_stable-diffusion-2-1_noise-1_16_0-1-2-3_dense_bindepth_dpt_k3_10_1.50_0.0005_0.0_16_NYUv2_NYUv2_dift_video_probe_04_21"
+nohup python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/21042024-1543_stable-diffusion-2-1_noise-1_16_0-1-2-3_dense_bindepth_dpt_k3_10_1.50_0.0005_0.0_16_NYUv2_NYUv2_dift_video_probe_04_21" > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dift_original_vids_eval_job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dift_original_vids_eval_job.err &
+python depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/21042024-1543_stable-diffusion-2-1_noise-1_16_0-1-2-3_dense_bindepth_dpt_k3_10_1.50_0.0005_0.0_16_NYUv2_NYUv2_dift_video_probe_04_21"
+fallen-bee-106
+[1] 95454
+
+# evaluate dift original nyu video @ ckpt_4_20000.pth for equal comparison
+python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/21042024-1543_stable-diffusion-2-1_noise-1_16_0-1-2-3_dense_bindepth_dpt_k3_10_1.50_0.0005_0.0_16_NYUv2_NYUv2_dift_video_probe_04_21"
+nohup python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/21042024-1543_stable-diffusion-2-1_noise-1_16_0-1-2-3_dense_bindepth_dpt_k3_10_1.50_0.0005_0.0_16_NYUv2_NYUv2_dift_video_probe_04_21/ckpt_4_20000.pth" > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dift_original_vids_eval_job_equal_comparison.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dift_original_vids_eval_job_equal_comparison.err &
+python depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/21042024-1543_stable-diffusion-2-1_noise-1_16_0-1-2-3_dense_bindepth_dpt_k3_10_1.50_0.0005_0.0_16_NYUv2_NYUv2_dift_video_probe_04_21"
+atomic-spaceship-109 - didn't finish
+sunny-microwave-113
+
+[1] 99907
+
+# evaluate dynamicrafter original nyu video
+python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/21042024-0525_dynamicrafter_512_interp_v1_noise-1_16_0-4-8-11_dense_bindepth_dpt_k3_10_1.50_0.0005_0.0_1_NYUv2_NYUv2_dynamicrafter_video_probe_step_1_04_21"
+nohup python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/21042024-0525_dynamicrafter_512_interp_v1_noise-1_16_0-4-8-11_dense_bindepth_dpt_k3_10_1.50_0.0005_0.0_1_NYUv2_NYUv2_dynamicrafter_video_probe_step_1_04_21" > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dynamicrafter_original_vids_eval_job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dynamicrafter_original_vids_eval_job.err &
+giddy-capybara-110
+slurm 27581728
+
+# evaluate dift readout nyu video 
+python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/23042024-0138_stable-diffusion-2-1_noise-1_16_1_dense_identity_readout_k3_10_1.50_0.001_0.0_16_NYUv2_NYUv2_dift_video_probe_readout_regression_04_23/ckpt_1_20000.pth"
+nohup python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/23042024-0138_stable-diffusion-2-1_noise-1_16_1_dense_identity_readout_k3_10_1.50_0.001_0.0_16_NYUv2_NYUv2_dift_video_probe_readout_regression_04_23/ckpt_1_20000.pth" > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dift_readout_vids_eval_job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dift_readout_vids_eval_job.err &
+soft-valley-111
+
+# evaluate dynamicrafter readout nyu video
+python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/23042024-0142_dynamicrafter_512_interp_v1_noise-1_16_4_dense_identity_readout_k3_10_1.50_0.001_0.0_16_NYUv2_NYUv2_dynamicrafter_video_probe_readout_regression_04_23" 
+nohup python evaluate_depth_video.py +checkpoint_path="/work/ececis_research/peace/dino-diffusion/probe3d/depth_exps/23042024-0142_dynamicrafter_512_interp_v1_noise-1_16_4_dense_identity_readout_k3_10_1.50_0.001_0.0_16_NYUv2_NYUv2_dynamicrafter_video_probe_readout_regression_04_23" > /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dynamicrafter_readout_vids_eval_job.out 2> /work/ececis_research/peace/dino-diffusion/probe3d/caviness/out/dynamicrafter_readout_vids_eval_job.err &
+dandy-wave-112
+
+

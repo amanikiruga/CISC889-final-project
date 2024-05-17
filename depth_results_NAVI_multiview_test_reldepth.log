@@ -1,0 +1,2 @@
+04052024-1938, dynamicrafter_512_interp_v1all-timesteps, 16, all-layers, dense     , identity_readout_k3      , 200, 1.50,      0.001,      0.001,   16, NAVI_multiview_train_reldepth, NAVI_multiview_test_reldepth, 0.5237, 0.7686, 0.8677, 0.1220, 0.6155, 0.8072, 0.8840, 0.1068 
+04052024-2133, dynamicrafter_512_interp_v1             , 16, all-layers, dense     , identity_readout_k3      , 200, 1.50,      0.001,      0.001,    1, NAVI_multiview_train_reldepth, NAVI_multiview_test_reldepth, 0.3506, 0.5794, 0.7194, 0.1907, 0.4336, 0.6606, 0.7745, 0.1562 

@@ -721,8 +721,6 @@ class Image2VideoExposed():
             else: 
                 img_tensor_repeat = z
             
-            
-
             if self.is_single_image:
                 cond_images = model.embedder(img_tensors) ## blc
             else:

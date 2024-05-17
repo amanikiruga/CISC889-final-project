@@ -1,0 +1,5 @@
+_target_: evals.models.dynamicrafter_hyperfeatures.DynamiCrafterHyperfeatures
+resolution: "320_512"
+batch_size: 1
+output: dense
+is_single_image: False

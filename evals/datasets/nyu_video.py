@@ -27,7 +27,7 @@ import pickle
 import numpy as np
 import scipy
 import torch
-
+from torch.nn import functional as F
 from .utils import get_nyu_transforms
 
 
@@ -125,7 +125,7 @@ class NYU_geonet_video(torch.utils.data.Dataset):
         elif split == "valid":
             scene_keys = scene_keys[int(0.8 * len(scene_keys)):]
         elif split != "trainval":
-            raise ValueError()
+            raise ValueError(f"Invalid split: {split}")
 
 
         # Sort files in each scene by timestamp and prepare data groups
@@ -172,7 +172,7 @@ class NYU_geonet_video(torch.utils.data.Dataset):
             image = self.image_transform(image)
 
             # set max depth to 10
-            # depth[depth > self.max_depth] = 0
+            depth[depth > self.max_depth] = 0
 
             # center crop
             if self.center_crop:
@@ -194,9 +194,17 @@ class NYU_geonet_video(torch.utils.data.Dataset):
                 snorm = torch.tensor(transformed["snorm"]).float().permute(2, 0, 1)
                 depth = torch.tensor(transformed["depth"]).float()[None, :, :, 0]
             else:
+                # remove padding and interpolate to 480x480 
+                image = image[:, 44:470, :]
+                depth = depth[44:470, :]
+                
                 # move to torch tensors
                 depth = torch.tensor(depth).float()[None, :, :]
                 snorm = torch.tensor(snorm).float()
+
+                # interpolate 
+                image = F.interpolate(image[None, ...].float(), size=(480, 480), mode='bilinear', align_corners=False)[0]
+                depth = F.interpolate(depth[None, ...].float(), size=(480, 480), mode='bilinear', align_corners=False)[0]
             
             images.append(image)
             depths.append(depth)

@@ -87,7 +87,7 @@ def train(
         pbar = tqdm(train_loader) if rank == 0 else train_loader
         for i, batch in enumerate(pbar):
             images = batch["image"].to(rank).squeeze(0)
-            target = batch["depth"].to(rank).squeeze(0)[:cfg.batch_size]
+            target = batch["depth"].to(rank).squeeze(0)
             
 
             optimizer.zero_grad()
@@ -100,7 +100,7 @@ def train(
                         feats = feats.detach()
             else:
                 feats = model(images)
-            pred = probe(feats)[:cfg.batch_size]
+            pred = probe(feats)
             print("pred stats", pred.min(), pred.max())
             print("target stats", target.min(), target.max())
             pred = interpolate(pred, size=target.shape[-2:], mode="bilinear")
@@ -109,8 +109,8 @@ def train(
                 pred = match_scale_and_shift(pred, target)
                 pred = pred.clamp(min=0.001, max=10.0)
             loss = loss_fn(pred, target)
-            print("pred stats", pred.min(), pred.max()) 
-            print("target stats", target.min(), target.max() )
+            # print("pred stats", pred.min(), pred.max()) 
+            # print("target stats", target.min(), target.max() )
             loss.backward()
             optimizer.step()
             scheduler.step()
@@ -162,10 +162,10 @@ def validate(
         pbar = tqdm(loader, desc="Evaluation") if verbose else loader
         for i, batch in enumerate(pbar):
             images = batch["image"].cuda().squeeze(0)
-            target = batch["depth"].cuda().squeeze(0)[:cfg.batch_size]
+            target = batch["depth"].cuda().squeeze(0)
 
             feat = model(images)
-            pred = probe(feat).detach()[:cfg.batch_size]
+            pred = probe(feat).detach()
             pred = interpolate(pred, size=target.shape[-2:], mode="bilinear")
 
             if i % log_interval == 0:
@@ -200,16 +200,24 @@ def validate(
     return total_loss, metrics
 
 
+
 def train_model(rank, world_size, cfg):
     if world_size > 1:
         ddp_setup(rank, world_size, cfg.system.port)
-
+    
+    if "checkpoint" in cfg: 
+        probe_checkpoint = torch.load(cfg.probe_checkpoint)
+        probe.load_state_dict(probe_checkpoint["probe"])
+        
     # ===== GET DATA LOADERS =====
     # validate and test on single gpu
-    # train_loader = build_loader(cfg.dataset, "train", 1, world_size)
-    # test_loader = build_loader(cfg.dataset, "valid", 1, 1)
-    train_loader = build_loader(cfg.dataset, "trainval", cfg.batch_size, world_size)
-    test_loader = build_loader(cfg.dataset, "test", cfg.batch_size, 1)
+    
+    train_loader = build_loader(cfg.dataset, "train", 1, world_size)
+    test_loader = build_loader(cfg.dataset, "valid", 1, 1)
+    # train_loader = build_loader(cfg.dataset, "trainval", 1, world_size)
+    # test_loader = build_loader(cfg.dataset, "test", 1, 1)
+    # train_loader = build_loader(cfg.dataset, "trainval", cfg.batch_size, world_size)
+    # test_loader = build_loader(cfg.dataset, "test", cfg.batch_size, 1)
     train_loader.dataset.__getitem__(0)
 
     # ===== Get models =====
@@ -263,6 +271,14 @@ def train_model(rank, world_size, cfg):
         h, w = train_loader.dataset.__getitem__(0)["image"].shape[-2:]
         model.resize_pos_embed(image_size=(h, w))
 
+    # # print model named parameters 
+    # print("Model named parameters")
+    # for name, param in model.named_parameters():
+    #     print(name)
+    # print("Probe named parameters")
+    # for name, param in probe.named_parameters():
+    #     print(name)
+
     # move to DDP
     if world_size > 1:
         model = DDP(model, device_ids=[rank], find_unused_parameters=True)
@@ -273,6 +289,7 @@ def train_model(rank, world_size, cfg):
             [{"params": probe.parameters(), "lr": cfg.optimizer.probe_lr}]
         )
     else:
+        print("training model!")
         optimizer = torch.optim.AdamW(
             [
                 {"params": probe.parameters(), "lr": cfg.optimizer.probe_lr},
@@ -302,8 +319,8 @@ def train_model(rank, world_size, cfg):
         world_size=world_size,
         cfg = cfg, 
         exp_path = exp_path,    
-        log_interval=cfg.log_interval or 200,
-        # scale_invariant = cfg.scale_invariant,
+        log_interval=cfg.log_interval if "log_interval" in cfg else 200,
+        scale_invariant = cfg.scale_invariant if "scale_invariant" in cfg else False,
         # valid_loader=test_loader,     
     )
 

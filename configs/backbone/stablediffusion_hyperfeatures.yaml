@@ -1,0 +1,5 @@
+_target_: evals.models.stablediffusion_hyperfeatures.StableDiffusionHyperfeatures
+resolution: "320_512"
+batch_size: 16
+output: dense
+is_single_image: False
