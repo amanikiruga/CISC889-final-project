@@ -1,5 +1,7 @@
-Probing the 3D Awareness of Visual Foundation Models
+CISC889: Do video diffusion models have better 3D features than image diffusion models? 
 =====================================================
+
+Code was adapted form the [Probe3d](https://github.com/mbanani/probe3d) codebase with changes to include video diffusion models and [diffusion hyperfeatures](https://diffusion-hyperfeatures.github.io/). Please find necessary commands to run in `notes.txt`
 
 This repository contains a re-implementation of the code for the paper [Probing the 3D Awareness of
 Visual Foundation Models](https://arxiv.org/abs/2404.08636) (CVPR 2024) which presents an analysis of the 3D awareness of visual
